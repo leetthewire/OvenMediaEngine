@@ -45,13 +45,9 @@ bool EncoderOPUS::Configure(std::shared_ptr<MediaTrack> context)
 		return false;
 	}
 
-	// Coding Mode
-	// int application = OPUS_APPLICATION_VOIP;
-	// int application = OPUS_APPLICATION_AUDIO;
-	int application = OPUS_APPLICATION_RESTRICTED_LOWDELAY;
 	int error;
 
-	_encoder = ::opus_encoder_create(GetRefTrack()->GetSampleRate(), GetRefTrack()->GetChannel().GetCounts(), application, &error);
+	_encoder = ::opus_encoder_create(GetRefTrack()->GetSampleRate(), GetRefTrack()->GetChannel().GetCounts(), GetRefTrack()->GetCodingMode(), &error);
 	if ((_encoder == nullptr) || (error != OPUS_OK))
 	{
 		logte("Could not create OPUS encoder: %d", error);

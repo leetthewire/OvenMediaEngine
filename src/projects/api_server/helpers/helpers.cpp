@@ -267,6 +267,7 @@ namespace api
 			codec["samplerate"] = 48000;
 			codec["channel"] = 2;
 			codec["bypassIfMatch"]["codec"] = "eq";
+			codec["codingmode"] = 2051;
 			encodes["audios"].append(codec);
 
 			codec = Json::objectValue;

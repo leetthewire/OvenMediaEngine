@@ -33,6 +33,9 @@ public:
 	void SetAudioSamplesPerFrame(int nbsamples);
 	int GetAudioSamplesPerFrame() const;
 
+	void SetCondingMode(int mode);
+	const int &GetCodingMode() const;
+
 protected:
 	// sample format, sample rate
 	cmn::AudioSample _sample;
@@ -45,4 +48,7 @@ protected:
 
 	// Sample Count per frame
 	int _audio_samples_per_frame;
+
+	// Application coding mode
+	int _coding_mode;
 };

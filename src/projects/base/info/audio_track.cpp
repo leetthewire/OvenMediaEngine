@@ -69,3 +69,13 @@ int AudioTrack::GetAudioSamplesPerFrame() const
 {
 	return _audio_samples_per_frame;
 }
+
+void AudioTrack::SetCondingMode(int mode)
+{
+	_coding_mode = mode;
+}
+
+const int &AudioTrack::GetCodingMode() const
+{
+	return _coding_mode;
+}

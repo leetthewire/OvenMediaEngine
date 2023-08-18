@@ -64,6 +64,7 @@ namespace serdes
 			SetInt(object, "channel", track->GetChannel().GetCounts());
 			SetString(object, "bitrate", ov::Converter::ToString(track->GetBitrate()), Optional::False);
 			SetTimebase(object, "timebase", track->GetTimeBase(), Optional::False);
+			SetInt(object, "codingmode", track->GetCodingMode(), Optional::True);
 		}
 	}
 
