@@ -29,6 +29,7 @@ namespace cfg
 					ov::String _bitrate_string;
 					int _samplerate = 0;
 					int _channel = 0;
+					int _coding_mode = 0;
 					BypassIfMatch _bypass_if_match;
 					
 				public:
@@ -86,6 +87,7 @@ namespace cfg
 							});
 						Register<Optional>("Samplerate", &_samplerate);
 						Register<Optional>("Channel", &_channel);
+						Register<Optional>("CodingMode", &_coding_mode);
 						Register<Optional>("BypassIfMatch", &_bypass_if_match);
 					}
 				};
